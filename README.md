@@ -40,21 +40,21 @@ Demo Workflow:
 
 . in the task table:
 
- [add] can add a new task. Edit the start date, end date, task type. 
+      [add] can add a new task. Edit the start date, end date, task type. 
 
- Select one task item, right click a model item in the model tree, a hyperlink will be generated for the column 
+      Select one task item, right click a model item in the model tree, a hyperlink will be generated for the column 
 
- [delete] can delete one selected task
+      [delete] can delete one selected task
 
- [delete all] can delete all tasks
+     [delete all] can delete all tasks
 
- [choose file] can load an existing task file on client (currently csv, or txt)
+     [choose file] can load an existing task file on client (currently csv, or txt)
 
- [demo file] will load an existing task file on server. In this case, it is timelinerdata.txt in Content.
+     [demo file] will load an existing task file on server. In this case, it is timelinerdata.txt in Content.
 
- [play] starts a simulation. Currently, only 'construction' of task type is implemented. 'demolish' been implemented
+      [play] starts a simulation. Currently, only 'construction' of task type is implemented. 'demolish' been implemented
 
-Simulation uses 'end date' only   
+     Simulation uses 'end date' only   
 
 the video ADN-Viewer-Timeliner.mp4 demos the detailed workflow. 
 
