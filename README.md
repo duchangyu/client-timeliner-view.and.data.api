@@ -33,7 +33,7 @@ A sample simulates Navisworks timeline with Autodesk Viewer
 
 ##Dependencies
 
-None
+You need other workflow samples to log in, upload a file, start translation to get required parameters (urn) for viewer
 
 ##Setup/Usage Instructions
 
