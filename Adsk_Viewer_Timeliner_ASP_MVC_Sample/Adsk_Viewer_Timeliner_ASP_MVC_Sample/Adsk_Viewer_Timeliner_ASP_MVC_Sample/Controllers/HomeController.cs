@@ -78,7 +78,7 @@ namespace Adsk_Viewer_Timeliner_ASP_MVC_Sample.Controllers
 
             //read the existing task file for demo
 
-            string taskfilename = Server.MapPath("./Content/timelinerdata.txt");
+            string taskfilename = Server.MapPath("~/Content/timelinerdata.txt");
             using (StreamReader objStreamReader = System.IO.File.OpenText(taskfilename))
             {
                 string content = objStreamReader.ReadToEnd().ToString();
