@@ -98,7 +98,7 @@ var pstyle = 'background-color: #F5F6F7; border: 1px solid #dfdfdf; padding: 5px
     $('#divModelButtons').w2toolbar({
         name: 'divModelButtons',
         items: [
-            { type: 'button', id: 'btnloadmodel', caption: 'Lode Model', img: 'icon-reload' }
+            { type: 'button', id: 'btnloadmodel', caption: 'Model Tree', img: 'icon-reload' }
         ],
         onClick: function (event) {
             console.log('item ' + event.target + ' is clicked.');
@@ -512,7 +512,10 @@ var pstyle = 'background-color: #F5F6F7; border: 1px solid #dfdfdf; padding: 5px
             viewer3D.initialize();
 
             // Load the document and associate the document with our Viewer3D 
-            Autodesk.Viewing.Document.load(documentId, Autodesk.Viewing.Private.getAuthObject(), onSuccessDocumentLoadCB, onErrorDocumentLoadCB);
+           // Autodesk.Viewing.Document.load(documentId, Autodesk.Viewing.Private.getAuthObject(), onSuccessDocumentLoadCB, onErrorDocumentLoadCB);
+           // change acccording to the discussion and update at:
+           // http://forums.autodesk.com/t5/View-and-Data-API/Autodesk-Viewing-Document-load-returns-quot-error-quot-quot/td-p/5141276
+           Autodesk.Viewing.Document.load(documentId, null, onSuccessDocumentLoadCB, onErrorDocumentLoadCB);
 
         });
      }
@@ -533,6 +536,9 @@ var pstyle = 'background-color: #F5F6F7; border: 1px solid #dfdfdf; padding: 5px
             viewer3D.load(item3d);
 
             console.log("Loading 3d Geometry from document : " + documentId);
+
+            if (viewer3D != null)
+                viewer3D.getObjectTree(getObjectTreeCB);
         }
         else {
             console.log("3d Geometry not found in document : " + documentId);
