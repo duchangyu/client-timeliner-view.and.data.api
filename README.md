@@ -36,16 +36,16 @@ Demo Workflow:
 * Click any model item, the corresponding object in the viewer will be isolated. 
 * In the task table:
 
-      * [add] can add a new task. Edit the start date, end date, task type. Select one task item, right click a model item in the model tree, a hyperlink will be generated for the column 
-      * [delete] can delete one selected task
-      * [delete all] can delete all tasks
-      * [choose file] can load an existing task file on client (currently csv, or txt)
-      * [demo file] will load an existing task file on server. In this case, it is timelinerdata.txt in Content.
-      * [play] starts a simulation. Currently, only 'construction' of task type is implemented. 'demolish' been implemented
+      * [add] : add a new task. Edit the start date, end date, task type. Select one task item, right click a model item in the model tree, a hyperlink will be generated for the column 
+      * [delete] : delete one selected task
+      * [delete all] : delete all tasks
+      * [choose file] : load an existing task file on client (currently csv, or txt)
+      * [demo file] : load an existing task file on server. In this case, it is timelinerdata.txt in Content.
+      * [play] : starts a simulation. Currently, only 'construction' of task type is implemented. 'demolish' been implemented
 
      Simulation uses 'end date' only   
 
-the video ADN-Viewer-Timeliner.mp4 demos the detailed workflow. 
+Please refer to the video [ADN-Viewer-Timeliner.mp4](https://github.com/Developer-Autodesk/client-timeliner-view.and.data.api/tree/master/Adsk_Viewer_Timeliner_ASP_MVC_Sample/Adsk_Viewer_Timeliner_ASP_MVC_Sample) for a demo of the detailed workflow. 
 
 ## License
 
