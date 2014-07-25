@@ -1,5 +1,5 @@
 
-#client-timeliner-view.and.data.api
+#Client sample - timeliner
 
 
 ##Description
@@ -18,34 +18,23 @@ You need other workflow samples to log in, upload a file, start translation to g
 
 Program Workflow
 
-. _layout.shtml designs the layout of the page
+* _layout.shtml designs the layout of the page
+* Timeliner_new_ui.js implements the layout and workflow   
+* HomeController.cs gets the token in server side, and send to client
+* Timeliner_new_ui.js loads the prepared model, by the token, displays it
+* presumption: register your api key and secret at https://developer.autodesk.com/ 
+* upload a model to viewing service. 
 
-. Timeliner_new_ui.js implements the layout and workflow   
-
-. HomeController.cs gets the token in server side, and send to client
-
-. Timeliner_new_ui.js loads the prepared model, by the token, displays it
-
-. presumption: register your api key and secret at https://developer.autodesk.com/ 
-
-. upload a model to viewing service. 
-
-     . you can use the demo desktop sample to upload model to get the urn
-
-     . or you can take advantage of the "functions reserved for other workflows" in HomeController.cs
+      you can use the demo desktop sample to upload model to get the urn or you can take advantage of the "functions reserved for other workflows" in HomeController.cs
 
 
 Demo Workflow:
 
-. Build the sample and deploy it to a website or localhost
-
-. open the website. wait a moment. The model will be displayed. You may need to clean up the cache of the browser before running
-
-. after the model is displayed. Click [Load Model]. The model tree will be listed
-
-. click any model item, the corresponding object in the viewer will be isolated. 
-
-. in the task table:
+* Build the sample and deploy it to a website or localhost
+* Browse to the website with Chrome or Firefox. PS. You may need to clean up cache of browser before running
+* Click [Load Model]. The model tree will be listed
+* Click any model item, the corresponding object in the viewer will be isolated. 
+* In the task table:
 
       [add] can add a new task. Edit the start date, end date, task type. 
 
