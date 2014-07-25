@@ -43,7 +43,7 @@ Demo Workflow:
       * [demo file] : load an existing task file on server. In this case, it is timelinerdata.txt in Content.
       * [play] : starts a simulation. Currently, only 'construction' of task type is implemented. 'demolish' been implemented
 
-     Simulation uses 'end date' only   
+* Simulation uses 'end date' only   
 
 Please refer to the video [ADN-Viewer-Timeliner.mp4](https://github.com/Developer-Autodesk/client-timeliner-view.and.data.api/tree/master/Adsk_Viewer_Timeliner_ASP_MVC_Sample/Adsk_Viewer_Timeliner_ASP_MVC_Sample) for a demo of the detailed workflow. 
 
