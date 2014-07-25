@@ -22,8 +22,8 @@ Program Workflow
 * Timeliner_new_ui.js implements the layout and workflow   
 * HomeController.cs gets the token in server side, and send to client
 * Timeliner_new_ui.js loads the prepared model, by the token, displays it
-* presumption: register your api key and secret at https://developer.autodesk.com/ 
-* upload a model to viewing service. 
+* Get your consumer key and secret key at https://developer.autodesk.com/ 
+* Upload a model to viewing service. 
 
       you can use the demo desktop sample to upload model to get the urn or you can take advantage of the "functions reserved for other workflows" in HomeController.cs
 
@@ -36,18 +36,11 @@ Demo Workflow:
 * Click any model item, the corresponding object in the viewer will be isolated. 
 * In the task table:
 
-      [add] can add a new task. Edit the start date, end date, task type. 
-
-      Select one task item, right click a model item in the model tree, a hyperlink will be generated for the column 
-
+      [add] can add a new task. Edit the start date, end date, task type. Select one task item, right click a model item in the model tree, a hyperlink will be generated for the column 
       [delete] can delete one selected task
-
-     [delete all] can delete all tasks
-
-     [choose file] can load an existing task file on client (currently csv, or txt)
-
-     [demo file] will load an existing task file on server. In this case, it is timelinerdata.txt in Content.
-
+      [delete all] can delete all tasks
+      [choose file] can load an existing task file on client (currently csv, or txt)
+      [demo file] will load an existing task file on server. In this case, it is timelinerdata.txt in Content.
       [play] starts a simulation. Currently, only 'construction' of task type is implemented. 'demolish' been implemented
 
      Simulation uses 'end date' only   
@@ -56,7 +49,7 @@ the video ADN-Viewer-Timeliner.mp4 demos the detailed workflow.
 
 ## License
 
-workflow-curl-view.and.data.api is licensed under the terms of the [MIT License](http://opensource.org/licenses/MIT). Please see the [LICENSE](LICENSE) file for full details.
+This sample is licensed under the terms of the [MIT License](http://opensource.org/licenses/MIT). Please see the [LICENSE](LICENSE) file for full details.
 
 ##Written by 
 
