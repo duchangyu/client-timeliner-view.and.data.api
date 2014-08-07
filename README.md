@@ -16,20 +16,10 @@ You need other workflow samples to log in, upload a file, start translation to g
 
 ##Setup/Usage Instructions
 
-Program Workflow
+You can use the demo desktop sample to upload model to get the urn or take advantage of the "functions reserved for other workflows" in HomeController.cs
 
-* _layout.shtml designs the layout of the page
-* Timeliner_new_ui.js implements the layout and workflow   
-* HomeController.cs gets the token in server side, and send to client
-* Timeliner_new_ui.js loads the prepared model, by the token, displays it
 * Get your consumer key and secret key at https://developer.autodesk.com/ 
 * Upload a model to viewing service. 
-
-      you can use the demo desktop sample to upload model to get the urn or you can take advantage of the "functions reserved for other workflows" in HomeController.cs
-
-
-Demo Workflow:
-
 * Build the sample and browse to the website with Chrome or Firefox. You may need to clean up cache of browser before running
 * Click [Load Model] to list the model tree
 * Click any model item to isolate the corresponding object in viewer 
