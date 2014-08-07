@@ -30,18 +30,17 @@ Program Workflow
 
 Demo Workflow:
 
-* Build the sample and deploy it to a website or localhost
-* Browse to the website with Chrome or Firefox. PS. You may need to clean up cache of browser before running
-* Click [Load Model]. The model tree will be listed
-* Click any model item, the corresponding object in the viewer will be isolated. 
-* In the task table:
+* Build the sample and browse to the website with Chrome or Firefox. You may need to clean up cache of browser before running
+* Click [Load Model] to list the model tree
+* Click any model item to isolate the corresponding object in viewer 
+* In task table:
 
       * [add] : add a new task. Edit the start date, end date, task type. Select one task item, right click a model item in the model tree, a hyperlink will be generated for the column 
       * [delete] : delete one selected task
       * [delete all] : delete all tasks
       * [choose file] : load an existing task file on client (currently csv, or txt)
-      * [demo file] : load an existing task file on server. In this case, it is timelinerdata.txt in Content.
-      * [play] : starts a simulation. Currently, only 'construction' of task type is implemented. 'demolish' been implemented
+      * [demo file] : load an existing task file on server. In this case, it is timelinerdata.txt in Content folder.
+      * [play] : starts a simulation process. Currently, only 'construction' of task type is implemented
 
 * Simulation uses 'end date' only   
 
