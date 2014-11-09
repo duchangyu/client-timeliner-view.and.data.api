@@ -16,7 +16,6 @@ You have the choice to use other workflow samples to log in, upload a file, star
 
 ##Setup/Usage Instructions
 
-You can use the demo desktop sample to upload model to get the urn or take advantage of the "functions reserved for other workflows" in HomeController.cs
 
 * Get your consumer key and secret key at https://developer.autodesk.com/ 
 * Upload a model to viewing service to prepare a default URN for demo. 
