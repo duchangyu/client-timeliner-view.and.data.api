@@ -12,7 +12,10 @@ A sample simulates Navisworks timeline with Autodesk Viewer
 
 ##Dependencies
 
-You have the choice to use other workflow samples to log in, upload a file, start translation to get required parameters (urn) for viewer, or use [New Model]in the sample to upload a model.
+* You have the choice to use other workflow samples to log in, upload a file, start translation to get required parameters (urn) for viewer, or use [New Model]in the sample to upload a model.
+* Get your consumer key and secret key at https://developer.autodesk.com/
+* Upload a model to viewing service to prepare a default URN for demo.
+* In web.config, provide your own API key, secret, bucket name and default URN string
 
 ##Setup/Usage Instructions
 
