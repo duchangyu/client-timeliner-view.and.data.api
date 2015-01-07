@@ -74,7 +74,9 @@ namespace Adsk_Viewer_Timeliner_ASP_MVC_Sample.Controllers
             GetAccessToken();
             
             ViewBag.AccessToken = _accessToken;
-            ViewBag.defaultURN = WebConfigurationManager.AppSettings["ViewerDefaultURN"]; ;
+            //moved the urn to Credentials.cs
+            //ViewBag.defaultURN = WebConfigurationManager.AppSettings["ViewerDefaultURN"]; ;
+            ViewBag.defaultURN = Credentials.DEFAULT_MODEL_URN;
             ViewBag.mybucket = _bucketName;
 
             //read the existing task file for demo
