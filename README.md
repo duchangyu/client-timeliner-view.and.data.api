@@ -23,7 +23,7 @@ A sample simulates Navisworks timeline with Autodesk Viewer
 
 * Get your consumer key and secret key at https://developer.autodesk.com/ 
 * Upload a model to viewing service to prepare a default URN for demo. 
-* In web.config, provide your own API key, secret, bucket name and default URN string
+* In Controllers\Credentials.cs, provide your own API key, secret, default bucket name and URN of default model
 * Build the sample and browse to the website with Chrome or Firefox. You may need to clean up cache of browser before running
 * The default model will be loaded. object tree is generated.  
 * Click any model item to isolate the corresponding object in viewer. click [Show All] to restore.
