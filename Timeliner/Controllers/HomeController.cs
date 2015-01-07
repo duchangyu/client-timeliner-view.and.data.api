@@ -26,14 +26,26 @@ namespace Adsk_Viewer_Timeliner_ASP_MVC_Sample.Controllers
 {
     public class HomeController : Controller
     {
+        //****moved the credentials to Credentials.cs
         //base url of viewer API
-        static String BASE_URL = "https://developer.api.autodesk.com";
+        //static String BASE_URL = "https://developer.api.autodesk.com";
         // Viewing Service client key
-        static String _clientKey = WebConfigurationManager.AppSettings["ViewerClientKey"]; 
+        //static String _clientKey = WebConfigurationManager.AppSettings["ViewerClientKey"]; 
+        //// Viewing service client secret
+        //static String _secretKey = WebConfigurationManager.AppSettings["ViewerSecretKey"]; 
+        //// Bucket name to upload your files
+        //static String _bucketName = WebConfigurationManager.AppSettings["ViewerBucket"];  
+        //****
+                
+
+        //base url of viewer API
+        static String BASE_URL = Credentials.BASE_URL;
+        // Viewing Service client key
+        static String _clientKey = Credentials.CONSUMER_KEY;
         // Viewing service client secret
-        static String _secretKey = WebConfigurationManager.AppSettings["ViewerSecretKey"]; 
+        static String _secretKey = Credentials.CONSUMER_SECRET;
         // Bucket name to upload your files
-        static String _bucketName = WebConfigurationManager.AppSettings["ViewerBucket"];  
+        static String _bucketName = Credentials.DEFAULT_BUCKET_KEY; 
          
 
         static RestClient _restclient = null;

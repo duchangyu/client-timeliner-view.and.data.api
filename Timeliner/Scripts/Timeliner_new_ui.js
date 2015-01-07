@@ -514,22 +514,35 @@ function getObjectTreeCB(result) {
             }
     }
 
+
+    //div: buttons for timeliner table
     $('#divTButtons').w2toolbar({
         name: 'divTButtons',
         items: [
+            // add a task
             { type: 'button', id: 'btnadd', caption: 'add', img: 'icon-add' },
+            //delete a task
             { type: 'button', id: 'btndelete', caption: 'delete', img: 'icon-delete' },
+            //delete all tasks
             { type: 'button', id: 'btndeleteall', caption: 'delete all', img: 'icon-delete' },
+            //break
             { type: 'break', id: 'break1' },
+            //browser to select a local tasks file
             { type: 'button', id: 'btnchoosefile', caption: 'choose task data', img: 'icon-folder' },
-           
+            //break
             { type: 'break', id: 'break2' },
+            //play timeliner
             { type: 'button', id: 'btnplay', caption: 'play', img: 'icon-save' },
-            { type: 'button', id: 'btnpause', caption: 'pause', img: 'icon-save',disabled:true },
+            //pause timeliner
+            { type: 'button', id: 'btnpause', caption: 'pause', img: 'icon-save', disabled: true },
+            //end timeliner
             { type: 'button', id: 'btnend', caption: 'end', img: 'icon-delete', disabled: true },
+            //break
             { type: 'break', id: 'break3' },
+            //load a new model
              { type: 'button', id: 'btnloadmodel', caption: 'New Model', img: 'icon-folder' },
-             { type: 'spacer'},
+             { type: 'spacer' },
+             //load an existing file of task
             { type: 'button', id: 'btnexistingfile', caption: 'demo task', img: 'icon-save' }
 
         ],
@@ -537,32 +550,36 @@ function getObjectTreeCB(result) {
             console.log('item ' + event.target + ' is clicked.');
 
             if (event.target == 'btnadd') {
+                //add a new task row
                 var len = w2ui.divTBContainer.records.length;
                 w2ui['divTBContainer'].add({ recid: len + 1, gridtaskid: len + 1, gridtaskname: 'New Task', gridstadate: "1/16/2014", gridenddate: "1/16/2014", gridtasktype: 1, gridmodel: 'attach model item' });
             }
             if (event.target == 'btndeleteall') {
+                //delete all task rows
                 w2ui.divTBContainer.selectAll();
                 w2ui.divTBContainer.delete(true);
             }
             if (event.target == 'btndelete') {
+                //delete selected task row
                 w2ui.divTBContainer.delete(true); 
 
             }
             if (event.target == 'btnchoosefile') {
                
+                //browser to select a local tasks file
                 w2ui.divTBContainer.selectAll();
                 w2ui.divTBContainer.delete(true);
                  $('#myInput').click();               
             }
 
             if (event.target == 'btnexistingfile') {
-                //
-
+               
+                //load an existing file of task
                 var defaultUrn = document.getElementById('defaultURN').value;
 
+                //compare if the current model is the default model. 
+                // because the existing file of task is for the default model only
                 if (_currentURN == defaultUrn) {
-
-
                     var demotaskscontent = document.getElementById('ExistingTasks').value;
                     demotaskscontent = demotaskscontent.replace(/<br>/g, "\r\n");
                     importTasks(demotaskscontent);
@@ -574,21 +591,24 @@ function getObjectTreeCB(result) {
             }
 
             if (event.target == 'btnloadmodel') {
-                //
+                //load a new model
                 $('#myInputModel').click();
                 console.log("btnloadmodel");
             }
 
             if (event.target == 'btnpause') {
+                //pause timeliner
                 w2ui['divTButtons'].enable("btnplay");
                 w2ui['divTButtons'].disable("btnpause");
                 clearInterval(timeHandle);
             }
 
             if (event.target == 'btnplay') {
+                //start to play timeliner
                 if (w2ui.divTBContainer.records.length > 0) {
 
-                                
+                    
+                    //display a temp div showing timeliner data
                     var parentdiv = $('<div></div>');         
                     parentdiv.attr('id', 'taskdiv');
                     parentdiv.html("");
@@ -597,23 +617,19 @@ function getObjectTreeCB(result) {
                     $("#taskdiv")[0].style.position = "absolute";
                     $("#taskdiv")[0].style.left = "20px";
                     $("#taskdiv")[0].style.top = "60px";
-                    $("#taskdiv")[0].style.zIndex = 10000;
-                 
+                    $("#taskdiv")[0].style.zIndex = 10000; 
 
-                    //parentdiv.addclass('parentdiv');   
-                    
-
-
+                    //enable/disable relevant buttons
                     w2ui['divTButtons'].disable('btnplay');
                     w2ui['divTButtons'].enable('btnpause');
                     w2ui['divTButtons'].enable('btnend');
  
                     if (playTotalKeyCount > 0) {
+                        //continue playing
                         timeHandle = setInterval(function () { myTimer() }, 500);
                     }
                     else {
-
-                        //viewer3D.propertygrid.openOnSelect = false;
+                         
                         globalPlayDic = getTableData();
 
                         //isolate all
@@ -624,6 +640,7 @@ function getObjectTreeCB(result) {
 
                         playCurrentKeyIndex = 0;
 
+                        //start the first task
                         playTotalKeyCount = keysArray.length;
                         timeHandle = setInterval(function () { myTimer() }, 1000);
                     } 
@@ -635,6 +652,7 @@ function getObjectTreeCB(result) {
             }
 
             if (event.target == 'btnpause') {
+                //pause the timeliner
                 w2ui['divTButtons'].enable("btnplay");
                 w2ui['divTButtons'].disable("btnpause");
                 clearInterval(timeHandle);
@@ -642,6 +660,7 @@ function getObjectTreeCB(result) {
 
             if (event.target == 'btnend') {
                 
+                //end the timeliner
                 clearInterval(timeHandle);
 
                  playCurrentKeyIndex = 0;
@@ -656,6 +675,7 @@ function getObjectTreeCB(result) {
                 w2ui['divTButtons'].disable("btnpause");
                 w2ui['divTButtons'].disable("btnend");
 
+                //remove the temp div
                 var obj = $("#taskdiv");
                 obj.remove();
 
@@ -667,6 +687,7 @@ function getObjectTreeCB(result) {
         }
     });
 
+    //div: timeliner table 
     $('#divTBPanel').w2layout({
         name: 'divTBPanel',
         panels: [
@@ -701,7 +722,8 @@ function getObjectTreeCB(result) {
     w2ui['divLayout'].content('bottom', w2ui['divTBPanel']);
  
 
-//functions for Viewer 
+    //functions for Viewer 
+    //load the default model
     {
         _currentURN = document.getElementById('defaultURN').value;;
         var thistoken = document.getElementById('AccessToken').value;
@@ -712,7 +734,7 @@ function getObjectTreeCB(result) {
                                       document.getElementById('divViewer'));
 
         
-
+        
         adnViewerMng.loadDocument(_currentURN);
     }
 
