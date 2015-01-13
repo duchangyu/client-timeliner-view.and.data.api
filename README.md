@@ -8,19 +8,18 @@
 
 A sample simulates Navisworks timeline with Autodesk Viewer
 
-
-
 ##Dependencies
 
-* Get your consumer key and secret key at https://developer.autodesk.com/
-* Use other workflow samples to log in, upload a model file, start translation to get default URN for demo. 
-* The demo model is available at  [gatehouse.nwd](https://github.com/Developer-Autodesk/client-timeliner-view.and.data.api/blob/master/gatehouse.nwd)  
-* In Credentials.cs, provide your own API key, secret, default bucket name and default URN string
+* The "Demo task" of this sample depends on the sample model, it is available at  [gatehouse.nwd](https://github.com/Developer-Autodesk/client-timeliner-view.and.data.api/blob/master/gatehouse.nwd)  
+
 
 ##Setup/Usage Instructions
 
-* Build the sample and browse to the website with Chrome or Firefox. You may need to clean up cache of browser before running
-* The default model will be loaded. object tree is generated.  
+* Get your consumer key and secret key at https://developer.autodesk.com/
+* With this key pair, use other workflow samples, for example, [this winform workflow sample](https://github.com/Developer-Autodesk/workflow-dotnet-winform-view.and.data.api) to create bucket, upload demo model and get the model translated, and get the models URN for latter usage.
+* Open the solution in Visual Studio 2012
+* Replace the place holder in Credentials.cs with your own consumer key and secret key, bucket name and URN which are the ones you created in step 2. The URN string should start with "urn:". 
+* Build and run the project, browse to the website with Chrome or Firefox. You may need to clean up cache of browser before running. The default model will be loaded. object tree is generated.  
 * Click any model item to isolate the corresponding object in viewer. click [Show All] to restore.
 * In task table:
 
@@ -28,8 +27,8 @@ A sample simulates Navisworks timeline with Autodesk Viewer
       * [delete] : delete one selected task
       * [delete all] : delete all tasks
       * [choose task data] : load an existing task file on client (currently csv, or txt)
-      * [New Model]: load a new model. it allows the user to choose a local model and upload it to view service, and the webpage can display the new model. The user can work with Timeliner with the new model
-      * [demo task] : load an existing task file on server. In this case, it is timelinerdata.txt in Content folder. It can only be useful for the demo model[gatehouse.nwd](https://github.com/Developer-Autodesk/client-timeliner-view.and.data.api/blob/master/gatehouse.nwd). If current model is different, the code will pop out an error message. 
+      * [New Model]: load a new model. it allows the user to choose a local model and upload it to view service, and the web page can display the new model. The user can work with Timeliner with the new model
+      * [demo task] : load an existing task file on server. In this case, it is timelinerdata.txt in Content folder. It can only be useful for the demo model [gatehouse.nwd](https://github.com/Developer-Autodesk/client-timeliner-view.and.data.api/blob/master/gatehouse.nwd). If current model is different, the code will pop out an error message. 
       * [play] : starts a simulation process. Currently, only 'construction' of task type is implemented
       * [Pause]: pause a simulation process
       * [End]:   stop a simulation process
