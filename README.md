@@ -4,8 +4,6 @@
 
 ##Description
 
-*This sample is part of the [Developer-Autodesk/Autodesk-View-and-Data-API-Samples](https://github.com/Developer-Autodesk/autodesk-view-and-data-api-samples) repository.*
-
 A sample simulates Navisworks timeline with Autodesk Viewer
 
 ##Dependencies
@@ -16,9 +14,9 @@ A sample simulates Navisworks timeline with Autodesk Viewer
 ##Setup/Usage Instructions
 
 * Get your consumer key and secret key at https://developer.autodesk.com/
-* With this key pair, use other workflow samples, for example, [this winform workflow sample](https://github.com/Developer-Autodesk/workflow-dotnet-winform-view.and.data.api) to create bucket, upload demo model and get the model translated, and get the models URN for latter usage.
+* With this key pair, use other workflow samples, for example, [this winform workflow sample](https://github.com/Developer-Autodesk/workflow-dotnet-winform-view.and.data.api) to create bucket, upload demo model and get the models URN for latter usage.
 * Open the solution in Visual Studio 2012, replace the place holder in Credentials.cs with your own consumer key and secret key, bucket name and URN which are the ones you created in step 2. The URN string should start with "urn:". 
-* Build and run the project, browse to the website with Chrome or Firefox. You may need to clean up cache of browser before running. The default model will be loaded. object tree is generated.  
+* Build and run the project, browse to the website with latest version of Chrome or Firefox. You may need to clean up cache of browser before running. The default model will be loaded. object tree is generated.  
 * Click any model item to isolate the corresponding object in viewer. click [Show All] to restore.
 * In task table:
 
